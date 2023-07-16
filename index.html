@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8" />
+        <title>title</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+                integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer">
+                </script>
+</head>
+
+<body>
+        <div class="loading-page" id="load">
+                <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="#00A4EF"
+                        viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                                d="M0 93.7l183.6-25.3v177.4H0V93.7zm0 324.6l183.6 25.3V268.4H0v149.9zm203.8 28L448 480V268.4H203.8v177.9zm0-380.6v180.1H448V32L203.8 65.7z" />
+                </svg>
+                <div class="name-container" id="name-container">
+                        <div class="logo-name" id="logo-name">MICROSOFT</div>
+                </div>
+        </div>
+
+
+        <script>
+                gsap.fromTo(
+                        ".loading-page",
+                        { opacity: 1 },
+                        {
+                                opacity: 1,
+                                duration: 1.6,
+                                delay: 2.5,
+                        }
+                );
+
+                gsap.fromTo(
+                        ".logo-name",
+                        {
+                                y: 50,
+                                opacity: 0,
+                        },
+                        {
+                                y: 0,
+                                opacity: 1,
+                                duration: 1.5,
+                                delay: 1,
+                        },
+                );
+        </script>
+</body>
+
+</html>
